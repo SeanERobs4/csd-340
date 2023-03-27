@@ -2,27 +2,23 @@ body {
     font-family: "Montserrat";
 }
 
-.left-div, right-div {
-    width: 45%;
-}
-
-ol {
-    list-style-position: inside;
-    border: 1px solid red;
-    border-radius: 15px;
-    padding: 10px;
-}
-
-ul {
-    list-style-position: inside;
-    border: 1px dashed red;
-    border-radius: 15px;
-    padding: 10px;
-}
-
-.last-div {
+#container {
     width: 100%;
+}
+
+#left-div {
+    width: 45%;
+    float: left;
+}
+
+#right-div {
+    width: 45%;
+    float: right;
+}
+
+#last-div {
     margin-top: 60%;
+    width: 100%;
     margin-bottom: 20px;
     float: right; 
 }
@@ -39,9 +35,26 @@ li {
     font-weight: 300;
 }
 
+ol {
+    list-style-position: inside;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: upper-roman;
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
 a:link {
-    color: #C952D8;
+    font-size: 1.25em;
     text-decoration: none;
+    float: right;
+    color: blue;
 }
         
 a:visited {
@@ -49,6 +62,5 @@ a:visited {
 }
 
 a:hover {
-  color: #87FF65;
   text-decoration: underline;
 }
