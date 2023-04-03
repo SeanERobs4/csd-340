@@ -1,0 +1,57 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#image-gallery {
+    margin-top: 10%;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(255, 0, 0, 0.5);
+}
+
+h3 {
+    text-align: center;
+    color: rgba(0, 255, 0, 0.5);
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: .75em;
+    color: rgba(0, 0, 255, 0.5);
+}
+
+a:link {
+    font-size: 1.25em;
+    text-decoration: none;
+    float: right;
+    color: blue;
+}
+        
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#last-div {
+    margin-top: 60%;
+    width: 100%;
+    margin-bottom: 20px;
+    float: right; 
+}
