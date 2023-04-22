@@ -1,39 +1,71 @@
-<!-- Sean Christman : Assignment 3.2 -->
+<!-- Sean Christman : bio Site - Landing Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sean Christman's CSD 340 Landing Page</title>
-    <meta charset="utf-8">
-    <meta name="description" content="GitHub Landing Page">
-    <meta name="keywords" content="GitHub, Landing, Page">
+    <title>Meet Jon Christman</title>
+    <meta name="description" content="bio Site - Landing Page">
+    <meta name="keywords" content="Bio, Landing, Sean, Jon, Christman">
     <meta name="author" content="Sean Christman">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div id=”container”>
-        <h1>Sean Christman's CSD 340 Landing Page</h1>
-        <h2>CSD 340 Web Development with HTML and CSS</h2>
-        <hr>
-        <h3>Module Assignments</h3>
-        <ul>
-          <li><a href="module-1/Christman_Mod1_3.html">Assignment 1.3</a></li>
-          <li><a href="module-2/Christman_Mod2_2.html">Assignment 2.2</a></li>
-          <li><a href="module-3/Christman_Mod3_3.html">Assignment 3.3</a></li>
-          <li><a href="module-4/Christman_Mod4_2.html">Assignment 4.2</a></li>
-          <li><a href="module-6/Christman_Mod6_2.html">Assignment 6.2</a></li>
-          <li><a href="module-8/Christman_Mod8_2.html">Assignment 8.2</a></li>
-        </ul>
-        <h3>Projects</h3>
-        <ul>
-            <li><a href="https://seanerobs4.github.io/bioSite/">bioSite Project Home Page</a></li>
-        </ul>
-        <h4>Important Links</h4>
-        <ul>
-          <li><a href="https://validator.w3.org/">W3C HTML Validator</a></li>
-          <li><a href="http://jigsaw.w3.org/css-validator/">W3C CSS Validator</a></li>
-          <li><a href="https://www.w3schools.com/html/">HTML Tutorial</a></li>
-          <li><a href="https://bruinconnect.bellevue.edu/">BRUIN Connect</a></li>
-        </ul>
+    <div id="header"><h1 align="left">Jon Christman</h1><div id="jpc_gallery_link" align="right"><a href="https://www.jpcgallery.com/"><img src="images/ZR8_Sketch.png" alt="JPC Gallery" id="jpc_gallery_png"></a></div></div>
+    <div id="navbar">
+        <a href="hobbies.html">Hobbies</a>
+        <a href="about.html">About</a>
+        <a href="index.html">Home</a>
     </div>
+    <div id="grid_container">
+        <div class="text_div">
+            <p id="intro">Meet Jon Christman<br>Artist, Musician, Handyman,<br>Kayaker, Photographer,<br>and so much more!</p>
+        </div>
+        <div class="image_div"><img src="images/Landing_Portrait.png"></div>
+        <div class="slideshow-div">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="images/Landing_Image1.png" style="width:100%">
+                <figcaption>Jon and Angie together in the woods.</figcaption>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="images/Landing_Image2.png" style="width:100%">
+                <figcaption>The art of Jon Christman, see more on the hobbies page.</figcaption>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="images/Landing_Image3.png" style="width:100%">
+                <figcaption>Jon taking a hike through the woods.</figcaption>
+            </div>
+        </div>
+        <div class="text_div">
+            <h2>Who is Jon Christman?</h2>
+            <p>Jon Christman is known for his fantastic artwork of varying styles. While residing in Madison, Wisconsin, he has showcased his art in many shows over the years. Jon also loves music. He’s played-out in bands, and releasing more music has been one of his goals in recent years.</p>
+            <p>Occupationally, as a residential maintenance technician in multiple locations near Madison. He possesses numerous skills and qualifications, including painting, drywall, electrical, plumbing, customer service, management experience. He's done work with plastering and drywall repair, and has learned from electricians how to install electrical panels.</p>
+        </div>
+    </div>
+    <footer>Check out his instagram: <a href="https://www.instagram.com/jpc_design/"><img src="images/instagram-logo.png" alt="Instagram Link" id="instagram_png"></a>
+        Check out his personal website: <a href="https://www.jpcgallery.com/">www.jpcgallery.com</a>
+    </footer>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 8000); // Change image every 8 seconds
+}
+</script>
+</body>
+    
+</html>
