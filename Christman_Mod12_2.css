@@ -1,0 +1,68 @@
+body {
+    font-family: "Montserrat";
+}
+
+#container {
+    width: 100%;
+}
+
+#left-div {
+    width: 45%;
+    float: left;
+}
+
+#right-div {
+    width: 45%;
+    float: right;
+}
+
+#last-div {
+    margin-top: 60%;
+    width: 100%;
+    margin-bottom: 20px;
+    float: right; 
+}
+
+h1 {
+    text-align: center;
+}
+
+h3{
+    font-weight: 500;
+}
+
+li {
+    font-weight: 300;
+}
+
+ol {
+    list-style-position: inside;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+
+ul {
+    list-style-position: inside;
+    list-style-type: upper-roman;
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+a:link {
+    font-size: 1.25em;
+    text-decoration: none;
+    float: right;
+    color: blue;
+}
+        
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  text-decoration: underline;
+}

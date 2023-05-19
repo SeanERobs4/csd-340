@@ -1,0 +1,80 @@
+<!-- Sean Christman : Assignment 12.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Assignment 12.2">
+    <meta name="keywords" content="Assignment, 12.2, Sean, Christman">
+    <meta name="author" content="Sean Christman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Christman_Mod12_2.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div id="left-div">
+            <ol id="books">
+            <h3>Top 10 Favorite Books</h3>
+            <input type="button" id="button1" value="Top to Bottom" onclick="top_to_bottom();"></input>
+            <input type="button" id="button2" value="Bottom to Top" onclick="bottom_to_top();"></input>
+            <hr/>
+              <li>The Return of the King</li>
+              <li>The Two Towers</li>
+              <li>The Fellowship of the Ring</li>
+              <li>The Hobbit</li>
+              <li>The Catcher in the Rye</li>
+              <li>To Kill a Mockingbird</li>
+              <li>The Iliad</li>
+              <li>The Odyssey</li>
+              <li>Brave New World</li>
+              <li>You Don't Know Me</li>
+             </ol>
+<script>
+function top_to_bottom() {
+    const bookListContainer = document.getElementById("books");
+    const bookListItems = bookListContainer.getElementsByTagName("li");
+    let orderedList = document.querySelector("#books");
+    const topToBottom = ["The Return of the King", "The Two Towers", "The Fellowship of the Ring", "The Hobbit", "The Catcher in the Rye", "To Kill a Mockingbird", "The Iliad", "The Odyssey", "Brave New World", "You Don't Know Me"];
+
+    topToBottom.forEach(bookTitle => {
+        for (let i = 0; i < bookListItems.length; i++) {
+            if (bookListItems[i].textContent === bookTitle) {
+                bookListContainer.appendChild(bookListItems[i]);
+                orderedList.reversed = !orderedList.reversed;
+            }
+        }
+    });
+}
+
+function bottom_to_top() {
+    const bookListContainer = document.getElementById("books");
+    const bookListItems = bookListContainer.getElementsByTagName("li");
+    let orderedList = document.querySelector("#books");
+    const bottomToTop = ["You Don't Know Me", "Brave New World", "The Odyssey", "The Iliad", "To Kill a Mockingbird", "The Catcher in the Rye", "The Hobbit", "The Fellowship of the Ring", "The Two Towers", "The Return of the King"];
+    bottomToTop.forEach(bookTitle => {
+        for (let i = 0; i < bookListItems.length; i++) {
+            if (bookListItems[i].textContent === bookTitle) {
+                bookListContainer.appendChild(bookListItems[i]);
+                orderedList.reversed = !orderedList.reversed;
+            }
+        }
+    });
+}
+</script>
+        </div>
+        <div id="right-div">
+            <ul>
+            <h3>5 Things I’ve Learned Since the Course Started</h3>
+              <li>How to Use GitHub Pages</li>
+              <li>The Uses of Visual Cues</li>
+              <li>The Difference of Central vs. Peripheral Vision</li>
+              <li>It’s a Good Thing that People Forget</li>
+              <li>The Most Vivid Memories are Wrong</li>
+            </ul>
+        </div>
+        <div id="last-div">
+            <a href="../index.html">Landing Page</a>
+        </div>
+    </div>
+</body>
